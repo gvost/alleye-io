@@ -1,0 +1,147 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  b  order-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Webfont: Moabhoers */
+@font-face {
+    font-family: 'Moabhoers';
+    src: url('font/Moabhoers.eot'); /* IE9 Compat Modes */
+    src: url('font/Moabhoers.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('font/Moabhoers.woff') format('woff'), /* Modern Browsers */
+         url('font/Moabhoers.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('font/Moabhoers.svg#Moabhoers') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+body {
+  padding: 5px;
+  font-family: 'Moabhoers';
+  color: rgba(255, 255, 255, 1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main.container {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 3px;
+  padding-top: 10vmax;
+}
+section.lo-container {
+  text-align: center;
+}
+p.main-text {
+  text-align: center;
+  padding-top: 3vmax;
+  font-size: 16px;
+}
+ul.link-list {
+  padding-top: 3vmax;
+  text-align: center;
+}
+li.links {
+  list-style: none;
+  display: inline-block;
+  margin: 0 2vmax;
+}
+a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  transition: all 200ms ease-out;
+}
+a.main-link {
+  font-size: 38px;
+}
+span.accent {
+  color: #50E3C2;
+  font-size: 28px;
+}
+footer {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  padding-bottom: 3vmax;
+  text-align: center;
+}
+li.secondary-links {
+  display: inline-block;
+  margin: 0 20px;
+}
+a.footer-link {
+  font-size: 14px;
+}
+a.interactive {
+  cursor: pointer;
+}
+a.interactive:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 10px #50E3C2;
+  color: #50E3C2;
+}
+div#modal {
+  display: none;
+  opacity: 0;
+  transition: all 200ms ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+}
