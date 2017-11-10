@@ -144,4 +144,11 @@ div#modal {
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  text-align: center;
+}
+iframe.youtube {
+  min-height: 315px;
+  width: 64vmax;
+  max-width: 90%;
 }

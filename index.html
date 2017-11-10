@@ -44,7 +44,7 @@
           <a id="see" class="main-link interactive">See it</a>
         </li>
         <li class="links">
-          <a class="main-link interactive" href="https://github.com/gvost/all-eye/releases/download/0.1.2/llEye-0.1.2.dmg" download>Get it</a>
+          <a class="main-link interactive" href="https://github.com/gvost/all-eye/releases/download/0.1.2/allEye-0.1.2.dmg" download>Get it</a>
         </li>
       </ul>
       <p class="main-text">
@@ -63,7 +63,7 @@
       </ul>
     </footer>
     <div id="modal">
-      <img src="/sub/img/all-eye-animated.gif" alt="">
+      <iframe class="youtube" src="https://www.youtube.com/embed/FxyIjx0m_Qs?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
   </main>
   <script type="text/javascript">
@@ -71,21 +71,25 @@
     var time = 10000
     var see = document.getElementById('see')
     var modal = document.getElementById('modal')
-    function fireAnimation (event) {
+    function showModal (event) {
+      console.log(clicked)
       event.preventDefault()
       modal.style.display = 'block'
       modal.style.opacity = 1
-      setTimeout(() => {
+      clicked = true
+    }
+    function hideModal (event) {
+      console.log(clicked)
+      event.preventDefault()
+      if (clicked === true && event.target !== see) {
         modal.style.opacity = 0
         setTimeout(() => {
           modal.style.display = 'none'
-          see.style.color = '#333'
-          see.classList.remove('interactive')
-        }, 300)
-      }, time)
-      see.removeEventListener('click', fireAnimation, false)
+        }, 400)
+      }
     }
-    see.addEventListener('click', fireAnimation, false)
+    see.addEventListener('click', showModal, false)
+    document.addEventListener('click', hideModal, false)
   </script>
 </body>
 </html>
